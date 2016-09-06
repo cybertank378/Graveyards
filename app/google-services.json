@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "371931380092",
+    "firebase_url": "https://graveyard-bde77.firebaseio.com",
+    "project_id": "graveyard-bde77",
+    "storage_bucket": "graveyard-bde77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:371931380092:android:af45d45942b48100",
+        "android_client_info": {
+          "package_name": "ubay.id"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "371931380092-o5f4j0jbeun77ukjc17m6qtblabgj3j3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAIbpa9W4yKzmViE68e-opwyMG40miqBI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
