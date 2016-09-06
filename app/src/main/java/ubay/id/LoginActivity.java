@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                String mEmail = emailInput.getText ().toString ();
+                final String mEmail = emailInput.getText ().toString ();
                 final String mPassword = passwordInput.getText ().toString ();
                 if (TextUtils.isEmpty (mEmail) && TextUtils.isEmpty (mPassword)){
                     mSnackBar = Snackbar.make (mCoordinatorLayout, "Please Check your login credentials is correct !!", Snackbar.LENGTH_LONG);
@@ -74,8 +74,9 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         mPbar.setVisibility (View.GONE);
                         if (!task.isSuccessful ()){
-                            if (mPassword.length () < 6 ){
+                            if (mPassword.length () < 6 && mEmail !=null ){
                                 emailInput.getText().clear();
+                                emailInput.setError(getString(R.string.not_valid));
                                 passwordInput.getText().clear();
                                 passwordInput.setError (getString (R.string.minimum_password));
                             } else {
