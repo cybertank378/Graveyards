@@ -15,7 +15,15 @@ public class FirebaseUtil {
     public static String getCurrentUserId() {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if (user != null) {
-            return user.getUid();
+            return user.getUid ();
+        }
+        return null;
+    }
+
+    public static String getCurrentUserName() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            return user.getDisplayName ();
         }
         return null;
     }

@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -64,7 +65,8 @@ public class LoginActivity extends AppCompatActivity {
                 final String mEmail = emailInput.getText ().toString ();
                 final String mPassword = passwordInput.getText ().toString ();
                 if (TextUtils.isEmpty (mEmail) && TextUtils.isEmpty (mPassword)){
-                    mSnackBar = Snackbar.make (mCoordinatorLayout, "Please Check your login credentials is correct !!", Snackbar.LENGTH_LONG);
+                    Log.d("DEBUG", "DATA ==" + FirebaseUtil.getCurrentUserName () );
+                    mSnackBar = Snackbar.make (mCoordinatorLayout, "Please Check your login credentials is correct!!", Snackbar.LENGTH_LONG);
                     mSnackBar.show ();
                 }
 
@@ -75,9 +77,7 @@ public class LoginActivity extends AppCompatActivity {
                         mPbar.setVisibility (View.GONE);
                         if (!task.isSuccessful ()){
                             if (mPassword.length () < 6 && mEmail !=null ){
-                                emailInput.getText().clear();
                                 emailInput.setError(getString(R.string.not_valid));
-                                passwordInput.getText().clear();
                                 passwordInput.setError (getString (R.string.minimum_password));
                             } else {
                                 mSnackBar = Snackbar.make (mCoordinatorLayout, getString(R.string.auth_failed), Snackbar.LENGTH_LONG);
@@ -104,13 +104,13 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        emailInput            = (TextInputEditText) findViewById (R.id.emailEdt);
-        passwordInput         = (TextInputEditText) findViewById (R.id.passwordEdt);
-        floatEmailText      = (TextInputLayout) findViewById (R.id.floatEmailText);
-        floatPasswordText   = (TextInputLayout) findViewById (R.id.floatPasswordText);
-        mLogin              = (Button) findViewById (R.id.btn_login);
-        mCoordinatorLayout  = (CoordinatorLayout) findViewById (R.id.coordinatorLayout);
-        mPbar               = (ProgressBar) findViewById (R.id.progressBar);
+        emailInput              = (TextInputEditText) findViewById (R.id.emailEdt);
+        passwordInput           = (TextInputEditText) findViewById (R.id.passwordEdt);
+        floatEmailText          = (TextInputLayout) findViewById (R.id.floatEmailText);
+        floatPasswordText       = (TextInputLayout) findViewById (R.id.floatPasswordText);
+        mLogin                  = (Button) findViewById (R.id.btn_login);
+        mCoordinatorLayout      = (CoordinatorLayout) findViewById (R.id.coordinatorLayout);
+        mPbar                   = (ProgressBar) findViewById (R.id.progressBar);
         setupFloatingLabelError();
 
     }

@@ -30,4 +30,5 @@
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
     <string name="username_required">You must fill your email</string>
     <string name="password_required">You must fill your passkey</string>
+    <string name="not_valid">Your email is not validated</string>
 </resources>

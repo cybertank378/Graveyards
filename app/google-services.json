@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "371931380092-8ijkjf2lgtf8emd2itcogq2d80a6e6l0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ubay.id",
+            "certificate_hash": "EE7F4E9413EF001CDE265E1F336B11C3D84CAE6B"
+          }
+        },
+        {
           "client_id": "371931380092-o5f4j0jbeun77ukjc17m6qtblabgj3j3.apps.googleusercontent.com",
           "client_type": 3
         }
