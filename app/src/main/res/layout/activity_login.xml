@@ -22,7 +22,8 @@
             android:layout_height="@dimen/logo_w_h"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:src="@mipmap/ic_launcher"/>
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/floatEmailText"
@@ -38,7 +39,8 @@
                 android:hint="@string/hint_email"
                 android:inputType="textEmailAddress"
                 android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"/>
+                android:textColorHint="@android:color/white"
+                tools:ignore="RtlHardcoded" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -55,7 +57,8 @@
                 android:hint="@string/hint_password"
                 android:inputType="textPassword"
                 android:textColor="@android:color/white"
-                android:textColorHint="@android:color/white"/>
+                android:textColorHint="@android:color/white"
+                tools:ignore="RtlHardcoded" />
         </android.support.design.widget.TextInputLayout>
 
         <!-- Login Button -->
@@ -90,7 +93,7 @@
             android:text="@string/btn_link_to_register"
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:textSize="15dp"/>
+            android:textSize="15sp"/>
     </LinearLayout>
 
     <ProgressBar
