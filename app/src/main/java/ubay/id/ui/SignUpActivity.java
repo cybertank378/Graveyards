@@ -1,4 +1,4 @@
-package ubay.id;
+package ubay.id.ui;
 
 /**
  * Created              : Rahman on 9/6/2016.
